@@ -20,6 +20,8 @@ Run fastAPI with uvicorn
 uvicorn grafanaapi.main:app --reload
 ```
 
+You can reach the api with `localhost:8000`, docs are availalbe at `localhost:8000/docs`
+
 Run grafana in docker with simpleJSON datasource installed
 
 ```bash
@@ -29,3 +31,5 @@ docker run -d \
 -e "GF_INSTALL_PLUGINS=grafana-simple-json-datasource" \
 grafana/grafana
 ```
+
+Configure the SimpleJson datasource with `http://localhost:8000`, choose `Browser` for the Access option.
